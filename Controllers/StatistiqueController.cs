@@ -75,6 +75,14 @@ namespace statistique.Controllers
             List<StatistiqueModel> statgeneral = stat.StatAttExt();
             return Json(statgeneral);
         } 
+
+        [HttpGet("selectStatAttaqueGeneral")]
+        public IActionResult StatAttGen()
+        {
+            StatistiqueModel stat = new StatistiqueModel();
+            List<StatistiqueModel> statgeneral = stat.StatAttGen();
+            return Json(statgeneral);
+        } 
         
     }
 }
