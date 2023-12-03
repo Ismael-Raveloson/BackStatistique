@@ -22,7 +22,6 @@ app.UseCors(options =>
     options.AllowAnyOrigin();
     options.AllowAnyHeader();
     options.AllowAnyMethod();
-    options.WithOrigins("https://statfootmada.azurewebsites.net");
 });
 
 app.UseHttpsRedirection();
