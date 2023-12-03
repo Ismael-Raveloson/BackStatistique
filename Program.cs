@@ -16,6 +16,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// Enable CORS
+app.UseCors(options =>
+{
+    options.AllowAnyOrigin();
+    options.AllowAnyHeader();
+    options.AllowAnyMethod();
+    options.WithOrigins("https://statfootmada.azurewebsites.net");
+});
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
